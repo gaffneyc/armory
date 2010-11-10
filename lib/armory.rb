@@ -19,7 +19,7 @@ module Armory
       :params     => { :r => realm, :n => character }
     })
 
-    case response.status
+    case response.code
     when 404
       raise CharacterNotFound, "Could not find #{character} on #{region}:#{realm}"
     end

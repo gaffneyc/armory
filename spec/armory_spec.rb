@@ -7,8 +7,8 @@ describe Armory do
   # TODO: Make a Character model instead of some crazy hash
   it "should properly parse a character" do
     response = stub(
-      :body   => fixture("hunter"),
-      :status => 200
+      :body => fixture("hunter"),
+      :code => 200
     )
     Typhoeus::Request.expects(:get).returns(response)
     
@@ -45,8 +45,8 @@ describe Armory do
 
   it "should raise appropriate errors if the character cannot be found" do
     response = stub(
-      :body   => '',
-      :status => 404
+      :body => '',
+      :code => 404
     )
     Typhoeus::Request.expects(:get).returns(response)
 
