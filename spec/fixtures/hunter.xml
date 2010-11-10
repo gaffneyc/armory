@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="/_layout/character/sheet.xsl"?><page globalSearch="1" lang="en_us" requestUrl="/character-sheet.xml">
+  <tabInfo subTab="profile" tab="character" tabGroup="character" tabUrl="r=Detheroc&amp;cn=Hunter&amp;gn=Exiled"/>
+  <characterInfo>
+    <character battleGroup="Shadowburn" charUrl="r=Detheroc&amp;cn=Hunter" class="Hunter" classId="3" classUrl="c=Hunter" faction="Horde" factionId="1" gender="Male" genderId="0" guildName="Exiled" guildUrl="r=Detheroc&amp;gn=Exiled" lastModified="October 13, 2010" level="80" name="Hunter" points="9020" prefix="" race="Orc" raceId="2" realm="Detheroc" suffix=", Bane of the Fallen King" titleId="139">
+      <modelBasePath value="http://us.media.battle.net.edgesuite.net/"/>
+    </character>
+    <characterTab>
+      <talentSpecs>
+        <talentSpec group="2" icon="ability_hunter_camouflage" prim="Survival" treeOne="3" treeThree="31" treeTwo="2"/>
+        <talentSpec active="1" group="1" icon="ability_hunter_focusedaim" prim="Marksmanship" treeOne="3" treeThree="2" treeTwo="31"/>
+      </talentSpecs>
+      <buffs/>
+      <debuffs/>
+      <pvp>
+        <lifetimehonorablekills value="5348"/>
+        <arenacurrency value="0"/>
+      </pvp>
+      <professions>
+        <skill id="164" key="blacksmithing" max="450" name="Blacksmithing" value="450"/>
+        <skill id="202" key="engineering" max="450" name="Engineering" value="450"/>
+      </professions>
+      <secondaryProfessions>
+        <skill id="185" key="cooking" max="450" name="Cooking" value="450"/>
+        <skill id="129" key="firstaid" max="450" name="First Aid" value="450"/>
+      </secondaryProfessions>
+      <characterBars>
+        <health effective="30984"/>
+        <secondBar casting="0" effective="0" notCasting="18" type="m"/>
+      </characterBars>
+      <baseStats>
+        <strength attack="232" base="77" block="-1" effective="242"/>
+        <agility armor="5018" attack="2499" base="186" critHitPercent="28.63" effective="2509"/>
+        <stamina base="129" effective="2384" health="23660" petBonus="715"/>
+        <intellect base="87" critHitPercent="0.00" effective="97" mana="1175" petBonus="-1"/>
+        <spirit base="99" effective="109" healthRegen="17" manaRegen="17"/>
+        <armor base="12225" effective="12225" percent="44.52" petBonus="4279"/>
+      </baseStats>
+      <resistances>
+        <arcane petBonus="0" value="0"/>
+        <fire petBonus="0" value="0"/>
+        <frost petBonus="0" value="0"/>
+        <holy petBonus="0" value="0"/>
+        <nature petBonus="0" value="0"/>
+        <shadow petBonus="0" value="0"/>
+      </resistances>
+      <melee>
+        <mainHandDamage dps="687.3" max="2163" min="1720" percent="0" speed="2.83"/>
+        <offHandDamage dps="147.9" max="246" min="245" percent="0" speed="1.66"/>
+        <mainHandSpeed hastePercent="20.37" hasteRating="668" value="2.83"/>
+        <offHandSpeed hastePercent="20.37" hasteRating="668" value="1.66"/>
+        <power base="3180" effective="3434" increasedDps="245.0"/>
+        <hitRating increasedHitPercent="8.16" penetration="0" reducedArmorPercent="0.00" value="251"/>
+        <critChance percent="66.10" plusPercent="37.47" rating="1720"/>
+        <expertise additional="0" percent="0.00" rating="0" value="0"/>
+      </melee>
+      <ranged>
+        <weaponSkill rating="0" value="0"/>
+        <damage dps="942.3" max="2423" min="1875" percent="0" speed="2.28"/>
+        <speed hastePercent="20.37" hasteRating="668" value="2.28"/>
+        <power base="5674" effective="6186" increasedDps="441.0" petAttack="1360.92" petSpell="796.14"/>
+        <hitRating increasedHitPercent="8.16" penetration="0" reducedArmorPercent="0.00" value="251"/>
+        <critChance percent="66.97" plusPercent="38.34" rating="1760"/>
+      </ranged>
+      <spell>
+        <bonusDamage>
+          <arcane value="87"/>
+          <fire value="87"/>
+          <frost value="87"/>
+          <holy value="87"/>
+          <nature value="87"/>
+          <shadow value="87"/>
+          <petBonus attack="-1" damage="-1" fromType=""/>
+        </bonusDamage>
+        <bonusHealing value="87"/>
+        <hitRating increasedHitPercent="9.57" penetration="0" reducedResist="0" value="251"/>
+        <critChance rating="1720">
+          <arcane percent="37.47"/>
+          <fire percent="37.47"/>
+          <frost percent="37.47"/>
+          <holy percent="37.47"/>
+          <nature percent="37.47"/>
+          <shadow percent="37.47"/>
+        </critChance>
+        <penetration value="0"/>
+        <manaRegen casting="0.00" notCasting="18.00"/>
+        <hasteRating hastePercent="20.37" hasteRating="668"/>
+      </spell>
+      <defenses>
+        <armor base="12225" effective="12225" percent="44.52" petBonus="4279"/>
+        <defense decreasePercent="0.00" increasePercent="0.00" plusDefense="0" rating="0" value="-1.00"/>
+        <dodge increasePercent="0.00" percent="22.78" rating="0"/>
+        <parry increasePercent="0.00" percent="5.00" rating="0"/>
+        <block increasePercent="0.00" percent="0.00" rating="0"/>
+        <resilience damagePercent="0" hitPercent="0" value="0.00"/>
+      </defenses>
+      <items>
+        <item displayInfoId="65131" durability="99" gem0Id="41398" gem1Id="40112" gem2Id="0" gemIcon0="inv_jewelcrafting_shadowspirit_02" gemIcon1="inv_jewelcrafting_gem_37" icon="inv_helmet_158" id="51286" level="277" maxDurability="100" name="Sanctified Ahn'Kahar Blood Hunter's Headpiece" permanentEnchantIcon="ability_warrior_rampage" permanentEnchantItemId="44149" permanentenchant="3817" pickUp="PickUpSmallChain" putDown="PutDownSmallChain" randomPropertiesId="0" rarity="4" seed="0" slot="0"/>
+        <item displayInfoId="64216" durability="0" gem0Id="40125" gem1Id="0" gem2Id="0" gemIcon0="inv_jewelcrafting_gem_42" icon="inv_misc_monsterhorn_03" id="50421" level="264" maxDurability="0" name="Sindragosa's Cruel Claw" permanentenchant="0" pickUp="PickUpRing" putDown="PutDownRing" randomPropertiesId="0" rarity="4" seed="1837907072" slot="1"/>
+        <item displayInfoId="64829" durability="100" gem0Id="40157" gem1Id="0" gem2Id="0" gemIcon0="inv_jewelcrafting_gem_40" icon="inv_shoulder_113" id="51288" level="277" maxDurability="100" name="Sanctified Ahn'Kahar Blood Hunter's Spaulders" permanentEnchantIcon="inv_axe_85" permanentEnchantItemId="44871" permanentenchant="3808" pickUp="PickUpSmallChain" putDown="PutDownSmallChain" randomPropertiesId="0" rarity="4" seed="0" slot="2"/>
+        <item displayInfoId="53421" durability="0" gem0Id="0" gem1Id="0" gem2Id="0" icon="inv_shirt_blue_01" id="42374" level="1" maxDurability="0" name="Blue Martial Shirt" permanentenchant="0" pickUp="" putDown="" randomPropertiesId="0" rarity="1" seed="0" slot="3"/>
+        <item displayInfoId="64840" durability="164" gem0Id="40112" gem1Id="40125" gem2Id="0" gemIcon0="inv_jewelcrafting_gem_37" gemIcon1="inv_jewelcrafting_gem_42" icon="inv_chest_mail_11" id="51289" level="277" maxDurability="165" name="Sanctified Ahn'Kahar Blood Hunter's Tunic" permanentEnchantIcon="inv_scroll_03" permanentEnchantItemId="44465" permanentenchant="3832" pickUp="PickUpSmallChain" putDown="PutDownSmallChain" randomPropertiesId="0" rarity="4" seed="0" slot="4"/>
+        <item displayInfoId="64837" durability="55" gem0Id="40147" gem1Id="40112" gem2Id="40117" gemIcon0="inv_jewelcrafting_gem_39" gemIcon1="inv_jewelcrafting_gem_37" gemIcon2="inv_jewelcrafting_gem_38" icon="inv_belt_60" id="50688" level="277" maxDurability="55" name="Nerub'ar Stalker's Cord" permanentenchant="0" pickUp="PickUpSmallChain" putDown="PutDownSmallChain" randomPropertiesId="0" rarity="4" seed="2020223488" slot="5"/>
+        <item displayInfoId="64832" durability="119" gem0Id="40157" gem1Id="40112" gem2Id="40117" gemIcon0="inv_jewelcrafting_gem_40" gemIcon1="inv_jewelcrafting_gem_37" gemIcon2="inv_jewelcrafting_gem_38" icon="inv_pants_mail_32" id="50645" level="277" maxDurability="120" name="Leggings of Northern Lights" permanentEnchantIcon="inv_misc_armorkit_33" permanentEnchantItemId="38374" permanentenchant="3823" pickUp="PickUpSmallChain" putDown="PutDownSmallChain" randomPropertiesId="0" rarity="4" seed="-1833513728" slot="6"/>
+        <item displayInfoId="65410" durability="75" gem0Id="40112" gem1Id="40125" gem2Id="0" gemIcon0="inv_jewelcrafting_gem_37" gemIcon1="inv_jewelcrafting_gem_42" icon="inv_boots_mail_06" id="49897" level="264" maxDurability="75" name="Rock-Steady Treads" permanentenchant="0" pickUp="PickUpSmallChain" putDown="PutDownSmallChain" randomPropertiesId="0" rarity="4" seed="1208919808" slot="7"/>
+        <item displayInfoId="64831" durability="54" gem0Id="40125" gem1Id="40112" gem2Id="0" gemIcon0="inv_jewelcrafting_gem_42" gemIcon1="inv_jewelcrafting_gem_37" icon="inv_bracer_40" id="50655" level="277" maxDurability="55" name="Scourge Hunter's Vambraces" permanentEnchantIcon="inv_scroll_03" permanentEnchantItemId="44815" permanentenchant="3845" pickUp="PickUpSmallChain" putDown="PutDownSmallChain" randomPropertiesId="0" rarity="4" seed="2028935680" slot="8"/>
+        <item displayInfoId="64823" durability="55" gem0Id="40112" gem1Id="40117" gem2Id="0" gemIcon0="inv_jewelcrafting_gem_37" gemIcon1="inv_jewelcrafting_gem_38" icon="inv_gauntlets_84" id="51154" level="264" maxDurability="55" name="Sanctified Ahn'Kahar Blood Hunter's Handguards" permanentenchant="0" pickUp="PickUpSmallChain" putDown="PutDownSmallChain" randomPropertiesId="0" rarity="4" seed="0" slot="9"/>
+        <item displayInfoId="63958" durability="0" gem0Id="40147" gem1Id="0" gem2Id="0" gemIcon0="inv_jewelcrafting_gem_39" icon="inv_jewelry_ring_81" id="50402" level="277" maxDurability="0" name="Ashen Band of Endless Vengeance" permanentenchant="0" pickUp="PickUpMetalSmall" putDown="PutDownSmallMEtal" randomPropertiesId="0" rarity="4" seed="2003437696" slot="10"/>
+        <item displayInfoId="64227" durability="0" gem0Id="40112" gem1Id="0" gem2Id="0" gemIcon0="inv_jewelcrafting_gem_37" icon="item_icecrownringa" id="50186" level="264" maxDurability="0" name="Frostbrood Sapphire Ring" permanentenchant="0" pickUp="PickUpRing" putDown="PutDownRing" randomPropertiesId="0" rarity="4" seed="1445969664" slot="11"/>
+        <item displayInfoId="64244" durability="0" gem0Id="0" gem1Id="0" gem2Id="0" icon="inv_jewelry_trinket_04" id="50362" level="264" maxDurability="0" name="Deathbringer's Will" permanentenchant="0" pickUp="PickUpWand" putDown="PutDownWand" randomPropertiesId="0" rarity="4" seed="639932288" slot="12"/>
+        <item displayInfoId="70525" durability="0" gem0Id="0" gem1Id="0" gem2Id="0" icon="inv_misc_rubysanctum4" id="54569" level="271" maxDurability="0" name="Sharpened Twilight Scale" permanentenchant="0" pickUp="PickUpGems" putDown="PutDownGems" randomPropertiesId="0" rarity="4" seed="955881728" slot="13"/>
+        <item displayInfoId="64304" durability="0" gem0Id="40147" gem1Id="0" gem2Id="0" gemIcon0="inv_jewelcrafting_gem_39" icon="item_icecrowncloak" id="50653" level="277" maxDurability="0" name="Shadowvault Slayer's Cloak" permanentenchant="0" pickUp="PickUpCloth_Leather01" putDown="PutDownCloth_Leather01" randomPropertiesId="0" rarity="4" seed="-2108600704" slot="14"/>
+        <item displayInfoId="64554" durability="120" gem0Id="40112" gem1Id="40125" gem2Id="40147" gemIcon0="inv_jewelcrafting_gem_37" gemIcon1="inv_jewelcrafting_gem_42" gemIcon2="inv_jewelcrafting_gem_39" icon="inv_weapon_staff_109" id="50727" level="277" maxDurability="120" name="Bloodfall" permanentenchant="0" pickUp="PickUpMetalLArge" putDown="PutDownLArgeMEtal" randomPropertiesId="0" rarity="4" seed="419746256" slot="15"/>
+        <item displayInfoId="64356" durability="88" gem0Id="40112" gem1Id="0" gem2Id="0" gemIcon0="inv_jewelcrafting_gem_37" icon="inv_weapon_bow_55" id="50638" level="277" maxDurability="90" name="Zod's Repeating Longbow" permanentEnchantIcon="inv_misc_spyglass_02" permanentEnchantItemId="41167" permanentenchant="3608" pickUp="PickUpWoodSmall" putDown="PutDownWoodSmall" randomPropertiesId="0" rarity="4" seed="-2014464000" slot="17"/>
+        <item displayInfoId="65733" durability="0" gem0Id="0" gem1Id="0" gem2Id="0" icon="inv_shirt_guildtabard_01" id="52252" level="80" maxDurability="0" name="Tabard of the Lightbringer" permanentenchant="0" pickUp="PickUpCloth_Leather01" putDown="PutDownCloth_Leather01" randomPropertiesId="0" rarity="4" seed="149955648" slot="18"/>
+      </items>
+      <glyphs>
+        <glyph effect="Increases the healing done by your Mend Pet ability by  an additional 3%." icon="ability_hunter_mendpet" id="354" name="Glyph of Mending" type="major"/>
+        <glyph effect="Your Mend Pet spell increases your pet's happiness slightly." icon="ability_hunter_mendpet" id="440" name="Glyph of Mend Pet" type="minor"/>
+        <glyph effect="Reduces the cooldown of your Feign Death spell by 5 sec." icon="ability_rogue_feigndeath" id="441" name="Glyph of Feign Death" type="minor"/>
+        <glyph effect="Decreases the cooldown of Disengage by 5 sec." icon="ability_rogue_feint" id="358" name="Glyph of Disengage" type="major"/>
+        <glyph effect="Reduces the pushback suffered from damaging attacks while casting Revive Pet by 100%." icon="ability_hunter_beastsoothe" id="439" name="Glyph of Revive Pet" type="minor"/>
+        <glyph effect="Reduces the focus cost of Trap Launcher by 10." icon="ability_hunter_traplauncher" id="353" name="Glyph of Trap Launcher" type="major"/>
+        <glyph effect="Increases the damage dealt by Steady Shot by 10%." icon="ability_hunter_steadyshot" id="368" name="Glyph of Steady Shot" type="major"/>
+        <glyph effect="If the damage from your Kill Shot fails to kill a target at or below 20% health, your Kill Shot's cooldown is instantly reset. This effect has a 6 sec cooldown." icon="ability_hunter_assassinate2" id="692" name="Glyph of Kill Shot" type="major"/>
+        <glyph effect="Your Arcane Shot deals 12% more damage." icon="ability_impalingbolt" id="352" name="Glyph of Arcane Shot" type="major"/>
+      </glyphs>
+    </characterTab>
+    <summary>
+      <c earned="838" points="9020" total="1056" totalPoints="11640"/>
+      <category id="92" name="General">
+        <c earned="47" earnedPoints="485" total="52" totalPoints="535"/>
+      </category>
+      <category id="96" name="Quests">
+        <c earned="49" earnedPoints="530" total="49" totalPoints="530"/>
+      </category>
+      <category id="97" name="Exploration">
+        <c earned="68" earnedPoints="780" total="70" totalPoints="830"/>
+      </category>
+      <category id="95" name="Player vs. Player">
+        <c earned="56" earnedPoints="570" total="166" totalPoints="1930"/>
+      </category>
+      <category id="168" name="Dungeons &amp; Raids">
+        <c earned="389" earnedPoints="4220" total="458" totalPoints="4955"/>
+      </category>
+      <category id="169" name="Professions">
+        <c earned="67" earnedPoints="670" total="75" totalPoints="760"/>
+      </category>
+      <category id="201" name="Reputation">
+        <c earned="27" earnedPoints="335" total="45" totalPoints="560"/>
+      </category>
+      <category id="155" name="World Events">
+        <c earned="135" earnedPoints="1430" total="141" totalPoints="1540"/>
+      </category>
+      <category id="81" name="Feats of Strength">
+        <c earned="14"/>
+      </category>
+    </summary>
+  </characterInfo>
+</page>
