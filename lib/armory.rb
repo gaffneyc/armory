@@ -6,6 +6,9 @@ module Armory
 
   USER_AGENT = 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.4) Gecko/20100503 Firefox/3.6.4'
 
+  class Error < Exception; end
+  class CharacterNotFound < Error; end
+
   # TODO: Validate realms
   # TODO: Handle different regions
   # http://us.wowarmory.com/character-sheet.xml?r=Detheroc&n=Hunter
@@ -14,6 +17,11 @@ module Armory
       :user_agent => USER_AGENT,
       :params     => { :r => realm, :n => character }
     })
+
+    case response.status
+    when 404
+      raise CharacterNotFound, "Could not find #{character} on #{region}:#{realm}"
+    end
 
     doc = Nokogiri::XML(response.body)
     char_info = doc.css("characterInfo character")

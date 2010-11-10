@@ -6,8 +6,9 @@ describe Armory do
   # TODO: Handle equipment
   # TODO: Make a Character model instead of some crazy hash
   it "should properly parse a character" do
-    response = mock(
-      :body => fixture("hunter")
+    response = stub(
+      :body   => fixture("hunter"),
+      :status => 200
     )
     Typhoeus::Request.expects(:get).returns(response)
     
@@ -41,5 +42,16 @@ describe Armory do
 
   xit "should raise appropriate errors if the armory is not available"
   xit "should raise appropriate errors if the rate limit has been reached"
-  xit "should raise appropriate errors if the character cannot be found"
+
+  it "should raise appropriate errors if the character cannot be found" do
+    response = stub(
+      :body   => '',
+      :status => 404
+    )
+    Typhoeus::Request.expects(:get).returns(response)
+
+    lambda do
+      Armory.character_sheet('us', 'detheroc', 'hunter')
+    end.should raise_exception(Armory::CharacterNotFound)
+  end
 end
