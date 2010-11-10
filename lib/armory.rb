@@ -1,5 +1,6 @@
 require 'nokogiri'
 require 'typhoeus'
+require 'armory/version'
 
 module Armory
   extend self
