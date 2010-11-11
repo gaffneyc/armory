@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="/_layout/guild/roster.xsl"?><page globalSearch="1" lang="en_us" requestUrl="/guild-info.xml">
+  <tabInfo subTab="guildRoster" tab="guild" tabGroup="character" tabUrl="r=Detheroc&amp;gn=ZeeGuild"/>
+  <guildInfo>
+    <guildHeader battleGroup="Shadowburn" count="252" faction="1" name="ZeeGuild" nameUrl="ZeeGuild" realm="Detheroc" realmUrl="Detheroc" url="r=Detheroc&amp;gn=ZeeGuild">
+      <emblem emblemBackground="44" emblemBorderColor="15" emblemBorderStyle="3" emblemIconColor="14" emblemIconStyle="122"/>
+    </guildHeader>
+    <guild>
+      <members memberCount="7">
+        <character achPoints="180" classId="3" genderId="0" level="36" name="MrAwesome" raceId="8" rank="8" url="r=Detheroc&amp;cn=MrAwesome"/>
+        <character achPoints="4700" classId="5" genderId="0" level="80" name="OldMan" raceId="5" rank="8" url="r=Detheroc&amp;cn=OldMan"/>
+        <character achPoints="1835" classId="9" genderId="0" level="80" name="Arguer" raceId="5" rank="8" url="r=Detheroc&amp;cn=Arguer"/>
+        <character achPoints="50" classId="1" genderId="1" level="15" name="Leet" raceId="5" rank="8" url="r=Detheroc&amp;cn=Boshlol"/>
+        <character achPoints="5830" classId="3" genderId="0" level="80" name="SillyPerson" raceId="2" rank="8" url="r=Detheroc&amp;cn=Boogart"/>
+        <character achPoints="2820" classId="8" genderId="1" level="80" name="Johnson" raceId="5" rank="3" url="r=Detheroc&amp;cn=Johnson"/>
+        <character achPoints="1435" classId="11" genderId="0" level="80" name="Fondu" raceId="6" rank="8" url="r=Detheroc&amp;cn=Fondu"/>
+      </members>
+    </guild>
+  </guildInfo>
+</page>

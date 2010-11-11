@@ -54,4 +54,20 @@ describe Armory do
       Armory.character_sheet('us', 'detheroc', 'hunter')
     end.should raise_exception(Armory::CharacterNotFound)
   end
+
+  it "should properly parse a guild" do
+    response = stub(
+      :body => fixture("guild"),
+      :code => 200
+    )
+    Typhoeus::Request.expects(:get).returns(response)
+    
+    result = Armory.guild_info('us', 'detheroc', 'ZeeGuild')
+
+    result[:name].should == "ZeeGuild"
+    result[:realm].should == "Detheroc"
+    result[:faction_id].should == 1
+
+    result[:characters].length.should == 7
+  end
 end

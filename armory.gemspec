@@ -15,6 +15,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'nokogiri', '~> 1.4.3'
   s.add_dependency 'typhoeus', '~> 0.1.31'
 
-  s.add_development_dependency 'rspec',  '~> 2.0.0'
+  s.add_development_dependency 'rspec',  '~> 2.1.0'
   s.add_development_dependency 'mocha',  '~> 0.9.8'
 end

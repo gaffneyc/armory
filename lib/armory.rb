@@ -50,4 +50,38 @@ module Armory
       :gender_id  => char_info.attr('genderId').value.to_i
     }
   end
+
+  def guild_info(region, realm, guild_name)
+    response = Typhoeus::Request.get("http://us.wowarmory.com/guild-info.xml", {
+      :user_agent => USER_AGENT,
+      :params     => { :r => realm, :gn => guild_name }
+    })
+
+    case response.code
+    when 404
+      raise CharacterNotFound, "Could not find #{character} on #{region}:#{realm}"
+    end
+
+    doc = Nokogiri::XML(response.body)
+
+    info = doc.css("guildInfo")
+    header = info.css("guildHeader")
+    guild = info.css("guild")
+
+    {
+      :name => header.attr("name").value,
+      :realm => header.attr("realm").value,
+      :faction_id => header.attr("faction").value.to_i,
+
+      :characters => guild.css("members character").map do |member|
+        {
+          :name => member.attr("name"),
+          :class_id => member.attr("classId").to_i,
+          :gender_id => member.attr("genderId").to_i,
+          :race_id => member.attr("raceId").to_i,
+          :level => member.attr("level").to_i
+        }
+      end
+    }
+  end
 end
