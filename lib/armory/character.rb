@@ -1,3 +1,5 @@
+require 'date'
+
 module Armory
   class Character
 
