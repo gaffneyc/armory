@@ -13,9 +13,8 @@ Gem::Specification.new do |s|
   s.files              = Dir.glob("{lib,spec}/**/*") + %w[LICENSE README.rdoc]
 
   s.add_dependency 'nokogiri', '~> 1.4.3'
-  s.add_dependency 'typhoeus', '~> 0.1.31'
+  s.add_dependency 'typhoeus', '~> 0.2.0'
 
   s.add_development_dependency 'rspec',  '~> 2.1.0'
-  s.add_development_dependency 'mocha',  '~> 0.9.8'
-  s.add_development_dependency 'ruby-debug19'
+  s.add_development_dependency 'mocha',  '~> 0.9.9'
 end
