@@ -1,17 +1,15 @@
 require 'nokogiri'
 require 'typhoeus'
 
-require 'armory/defines'
-
 module Armory
   extend self
 
   autoload :VERSION, "armory/version"
 
-  autoload :Guild, "armory/guild"
+  autoload :Guild,     "armory/guild"
   autoload :Character, "armory/character"
 
-  autoload :GuildFactory, "armory/guild_factory"
+  autoload :GuildFactory,     "armory/guild_factory"
   autoload :CharacterFactory, "armory/character_factory"
 
   USER_AGENT = 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.4) Gecko/20100503 Firefox/3.6.4'
@@ -19,6 +17,42 @@ module Armory
   class Error < Exception; end
   class CharacterNotFound < Error; end
   class GuildNotFound < Error; end
+
+  Factions = {
+    0 => "Alliance",
+    1 => "Horde"
+  }
+
+  Genders = {
+    0 => "Male",
+    1 => "Female"
+  }
+
+  Races = {
+    1  => "Human",
+    2  => "Orc",
+    3  => "Dwarf",
+    4  => "Night Elf",
+    5  => "Undead",
+    6  => "Tauren",
+    7  => "Gnome",
+    8  => "Troll",
+    10 => "Blood Elf",
+    11 => "Draenei"
+  }
+
+  Classes = {
+    1  => "Warrior",
+    2  => "Paladin",
+    3  => "Hunter",
+    4  => "Rogue",
+    5  => "Priest",
+    6  => "Death Knight",
+    7  => "Shaman",
+    8  => "Mage",
+    9  => "Warlock",
+    11 => "Druid"
+  }
 
   # TODO: Validate realms
   # TODO: Handle different regions

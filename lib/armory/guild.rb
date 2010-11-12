@@ -10,9 +10,8 @@ module Armory
       @characters = []
     end
 
-    def faction_id=(val)
-      @faction = Faction[val]
-      @faction_id = val
+    def faction
+      Armory::Factions[faction_id]
     end
   end
 end

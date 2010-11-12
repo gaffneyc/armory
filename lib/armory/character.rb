@@ -1,29 +1,25 @@
 module Armory
   class Character
 
-    attr_accessor :name, :klass, :race, :level, :gender, :rank, :faction, :guild,
-      :realm, :battle_group, :last_modified
+    attr_accessor :name, :level, :rank, :guild, :realm, :battle_group,
+      :last_modified
 
-    attr_accessor :klass_id, :gender_id, :race_id, :faction_id
+    attr_accessor :class_id, :gender_id, :race_id, :faction_id
 
-    def class_id=(val)
-      @klass = Class[val]
-      @klass_id = val
+    def class_name
+      Armory::Classes[class_id]
     end
 
-    def gender_id=(val)
-      @gender = Gender[val]
-      @gender_id = val
+    def gender
+      Armory::Genders[gender_id]
     end
 
-    def race_id=(val)
-      @race = Race[val]
-      @race_id = val
+    def race
+      Armory::Races[race_id]
     end
 
-    def faction_id=(val)
-      @faction = Faction[val]
-      @faction_id = val
+    def faction
+      Armory::Factions[faction_id]
     end
 
   end

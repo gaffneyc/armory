@@ -17,8 +17,8 @@ describe Armory do
       # Basic information
       result.name.should == 'Hunter'
       result.level.should == 80
-      result.klass.should == 'Hunter'
-      result.klass_id.should == 3
+      result.class_name.should == 'Hunter'
+      result.class_id.should == 3
       result.guild.should == 'Exiled'
       result.last_modified.should == Date.parse('2010/10/13')
 
@@ -76,8 +76,8 @@ describe Armory do
 
       awesome = result.characters.find {|c| c.name == "MrAwesome" }
 
-      awesome.klass.should == "Mage"
-      awesome.klass_id.should == 8
+      awesome.class_name.should == "Mage"
+      awesome.class_id.should == 8
 
       awesome.race.should == "Troll"
       awesome.race_id.should == 8
