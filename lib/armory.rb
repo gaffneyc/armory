@@ -9,9 +9,6 @@ module Armory
   autoload :Guild,     "armory/guild"
   autoload :Character, "armory/character"
 
-  autoload :GuildFactory,     "armory/guild_factory"
-  autoload :CharacterFactory, "armory/character_factory"
-
   USER_AGENT = 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.4) Gecko/20100503 Firefox/3.6.4'
 
   class Error < Exception; end
