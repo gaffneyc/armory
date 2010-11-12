@@ -5,6 +5,11 @@ module Armory
       :last_modified
 
     attr_accessor :class_id, :gender_id, :race_id, :faction_id
+    attr_reader :items
+
+    def initialize
+      @items = []
+    end
 
     def class_name
       Armory::Classes[class_id]
@@ -38,8 +43,40 @@ module Armory
         char.class_id   = info.attr("classId").to_i
         char.gender_id  = info.attr("genderId").to_i
         char.faction_id = info.attr("factionId").to_i
+
+        doc.css("characterTab items item").each do |item|
+          char.items << Item.from_armory(item)
+        end
       end
     end
 
+    class Item
+      attr_accessor :id, :name, :level, :slot, :rarity
+      attr_accessor :durability, :max_durability, :enchant_id
+      attr_reader :gems
+
+      def initialize
+        @gems = []
+      end
+
+      def self.from_armory(doc)
+        Item.new.tap do |item|
+          item.id     = doc.attr('id').to_i
+          item.name   = doc.attr('name')
+          item.level  = doc.attr('level').to_i
+          item.slot   = doc.attr('slot').to_i
+          item.rarity = doc.attr('rarity').to_i
+
+          item.durability     = doc.attr('durability').to_i
+          item.max_durability = doc.attr('maxDurability').to_i
+          item.enchant_id     = doc.attr('permanentEnchantItemId').to_i
+
+          3.times do |i|
+            gem = doc.attr("gem#{i}Id").to_i
+            item.gems << gem if gem != 0
+          end
+        end
+      end
+    end
   end
 end
