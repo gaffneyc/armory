@@ -6,6 +6,7 @@ PATH
       typhoeus (~> 0.1.31)
 
 GEM
+  remote: http://rubygems.org/
   specs:
     archive-tar-minitar (0.5.2)
     columnize (0.3.2)
