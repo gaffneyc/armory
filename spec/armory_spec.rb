@@ -10,33 +10,15 @@ describe Armory do
         :body => fixture("hunter"),
         :code => 200
       )
-      Typhoeus::Request.expects(:get).returns(response)
+      Typhoeus::Request.expects(:get).with do |url, options|
+        url.should == 'http://us.wowarmory.com/character-sheet.xml'
+        options[:params].should == { :r => 'detheroc', :n => 'hunter' }
+      end.returns(response)
 
       result = Armory.character_sheet('us', 'detheroc', 'hunter')
 
       # Basic information
-      result.name.should == 'Hunter'
-      result.level.should == 80
-      result.class_name.should == 'Hunter'
-      result.class_id.should == 3
-      result.guild.should == 'Exiled'
-      result.last_modified.should == Date.parse('2010/10/13')
-
-      # Faction
-      result.faction.should == 'Horde'
-      result.faction_id.should == 1
-
-      # Race
-      result.race.should == 'Orc'
-      result.race_id.should == 2
-
-      # Gender
-      result.gender.should == 'Male'
-      result.gender_id.should == 0
-
-      # Server
-      result.realm.should == 'Detheroc'
-      result.battle_group.should == 'Shadowburn'
+      result.should be_instance_of(Armory::Character)
     end
 
     xit "should raise appropriate errors if the armory is not available"
