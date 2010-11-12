@@ -1,9 +1,18 @@
 require 'nokogiri'
 require 'typhoeus'
-require 'armory/version'
+
+require 'armory/defines'
 
 module Armory
   extend self
+
+  autoload :VERSION, "armory/version"
+
+  autoload :Guild, "armory/guild"
+  autoload :Character, "armory/character"
+
+  autoload :GuildFactory, "armory/guild_factory"
+  autoload :CharacterFactory, "armory/character_factory"
 
   USER_AGENT = 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.4) Gecko/20100503 Firefox/3.6.4'
 
@@ -64,24 +73,6 @@ module Armory
 
     doc = Nokogiri::XML(response.body)
 
-    info = doc.css("guildInfo")
-    header = info.css("guildHeader")
-    guild = info.css("guild")
-
-    {
-      :name => header.attr("name").value,
-      :realm => header.attr("realm").value,
-      :faction_id => header.attr("faction").value.to_i,
-
-      :characters => guild.css("members character").map do |member|
-        {
-          :name => member.attr("name"),
-          :class_id => member.attr("classId").to_i,
-          :gender_id => member.attr("genderId").to_i,
-          :race_id => member.attr("raceId").to_i,
-          :level => member.attr("level").to_i
-        }
-      end
-    }
+    GuildFactory.build(doc)
   end
 end

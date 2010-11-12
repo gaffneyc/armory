@@ -6,13 +6,13 @@
     </guildHeader>
     <guild>
       <members memberCount="7">
-        <character achPoints="180" classId="3" genderId="0" level="36" name="MrAwesome" raceId="8" rank="8" url="r=Detheroc&amp;cn=MrAwesome"/>
-        <character achPoints="4700" classId="5" genderId="0" level="80" name="OldMan" raceId="5" rank="8" url="r=Detheroc&amp;cn=OldMan"/>
-        <character achPoints="1835" classId="9" genderId="0" level="80" name="Arguer" raceId="5" rank="8" url="r=Detheroc&amp;cn=Arguer"/>
-        <character achPoints="50" classId="1" genderId="1" level="15" name="Leet" raceId="5" rank="8" url="r=Detheroc&amp;cn=Boshlol"/>
-        <character achPoints="5830" classId="3" genderId="0" level="80" name="SillyPerson" raceId="2" rank="8" url="r=Detheroc&amp;cn=Boogart"/>
-        <character achPoints="2820" classId="8" genderId="1" level="80" name="Johnson" raceId="5" rank="3" url="r=Detheroc&amp;cn=Johnson"/>
-        <character achPoints="1435" classId="11" genderId="0" level="80" name="Fondu" raceId="6" rank="8" url="r=Detheroc&amp;cn=Fondu"/>
+        <character achPoints="180" classId="8" genderId="0" level="36" name="MrAwesome" raceId="8" rank="1" url="r=Detheroc&amp;cn=MrAwesome"/>
+        <character achPoints="4700" classId="1" genderId="0" level="80" name="OldMan" raceId="5" rank="2" url="r=Detheroc&amp;cn=OldMan"/>
+        <character achPoints="1835" classId="2" genderId="0" level="80" name="Arguer" raceId="6" rank="3" url="r=Detheroc&amp;cn=Arguer"/>
+        <character achPoints="50" classId="3" genderId="1" level="15" name="Leet" raceId="10" rank="4" url="r=Detheroc&amp;cn=Boshlol"/>
+        <character achPoints="5830" classId="4" genderId="0" level="80" name="SillyPerson" raceId="2" rank="5" url="r=Detheroc&amp;cn=Boogart"/>
+        <character achPoints="2820" classId="5" genderId="1" level="80" name="Johnson" raceId="5" rank="6" url="r=Detheroc&amp;cn=Johnson"/>
+        <character achPoints="1435" classId="11" genderId="0" level="80" name="Fondu" raceId="6" rank="7" url="r=Detheroc&amp;cn=Fondu"/>
       </members>
     </guild>
   </guildInfo>

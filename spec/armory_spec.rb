@@ -55,19 +55,30 @@ describe Armory do
     end.should raise_exception(Armory::CharacterNotFound)
   end
 
-  it "should properly parse a guild" do
-    response = stub(
-      :body => fixture("guild"),
-      :code => 200
-    )
-    Typhoeus::Request.expects(:get).returns(response)
-    
-    result = Armory.guild_info('us', 'detheroc', 'ZeeGuild')
+  describe "#guild_info" do
 
-    result[:name].should == "ZeeGuild"
-    result[:realm].should == "Detheroc"
-    result[:faction_id].should == 1
+    it "should properly parse a guild" do
+      response = stub(
+        :body => fixture("guild"),
+        :code => 200
+      )
+      Typhoeus::Request.expects(:get).returns(response)
+      
+      result = Armory.guild_info('us', 'detheroc', 'ZeeGuild')
 
-    result[:characters].length.should == 7
+      result.name.should == "ZeeGuild"
+      result.realm.should == "Detheroc"
+      result.faction.should == "Horde"
+
+      result.characters.length.should == 7
+
+      awesome = result.characters.find {|c| c.name == "MrAwesome" }
+      awesome.klass.should == "Mage"
+      awesome.race.should == "Troll"
+      awesome.level.should == 36
+      awesome.rank.should == 1
+      awesome.gender.should == "Male"
+    end
+
   end
 end
