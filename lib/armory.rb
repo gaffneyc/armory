@@ -55,10 +55,7 @@ module Armory
   # TODO: Handle different regions
   # http://us.wowarmory.com/character-sheet.xml?r=Detheroc&n=Hunter
   def character_sheet(region, realm, character)
-    response = Typhoeus::Request.get("http://us.wowarmory.com/character-sheet.xml", {
-      :user_agent => USER_AGENT,
-      :params     => { :r => realm, :n => character }
-    })
+    response = make_request(region, 'character-sheet', :r => realm, :n => character)
 
     case response.code
     when 404
@@ -69,10 +66,7 @@ module Armory
   end
 
   def guild_info(region, realm, guild_name)
-    response = Typhoeus::Request.get("http://us.wowarmory.com/guild-info.xml", {
-      :user_agent => USER_AGENT,
-      :params     => { :r => realm, :gn => guild_name }
-    })
+    response = make_request(region, 'guild-info', :r => realm, :gn => guild_name)
 
     case response.code
     when 404
@@ -81,4 +75,15 @@ module Armory
 
     Guild.from_armory(Nokogiri::XML(response.body))
   end
+
+  private
+
+  # TODO: Use region
+  def make_request(region, page, params)
+    Typhoeus::Request.get("http://us.wowarmory.com/#{page}.xml", {
+      :user_agent => USER_AGENT,
+      :params     => params
+    })
+  end
+
 end
