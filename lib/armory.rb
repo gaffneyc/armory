@@ -68,9 +68,7 @@ module Armory
       raise CharacterNotFound, "Could not find #{character} on #{region}:#{realm}"
     end
 
-    doc = Nokogiri::XML(response.body)
-
-    CharacterFactory.build(doc.css("characterInfo character").first)
+    Character.from_armory(Nokogiri::XML(response.body))
   end
 
   def guild_info(region, realm, guild_name)
@@ -84,8 +82,6 @@ module Armory
       raise GuildNotFound, "Could not find #{guild_name} on #{region}:#{realm}"
     end
 
-    doc = Nokogiri::XML(response.body)
-
-    GuildFactory.build(doc)
+    Guild.from_armory(Nokogiri::XML(response.body))
   end
 end

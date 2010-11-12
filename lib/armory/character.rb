@@ -22,5 +22,24 @@ module Armory
       Armory::Factions[faction_id]
     end
 
+    def self.from_armory(doc)
+      Character.new.tap do |char|
+        info = doc.css("characterInfo character").first
+
+        char.name  = info.attr("name")
+        char.level = info.attr("level").to_i
+        char.guild = info.attr("guildName")
+        char.realm = info.attr("realm")
+        char.battle_group  = info.attr("battleGroup")
+        char.last_modified = Date.parse(info.attr('lastModified'))
+
+        # Attribute ids
+        char.race_id    = info.attr("raceId").to_i
+        char.class_id   = info.attr("classId").to_i
+        char.gender_id  = info.attr("genderId").to_i
+        char.faction_id = info.attr("factionId").to_i
+      end
+    end
+
   end
 end
