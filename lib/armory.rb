@@ -18,6 +18,7 @@ module Armory
 
   class Error < Exception; end
   class CharacterNotFound < Error; end
+  class GuildNotFound < Error; end
 
   # TODO: Validate realms
   # TODO: Handle different regions
@@ -34,30 +35,8 @@ module Armory
     end
 
     doc = Nokogiri::XML(response.body)
-    char_info = doc.css("characterInfo character")
 
-    {
-      :name       => char_info.attr('name').value,
-      :level      => char_info.attr('level').value.to_i,
-      :guild      => char_info.attr('guildName').value,
-
-      :region     => region,
-      :realm      => char_info.attr('realm').value,
-      :battle_group  => char_info.attr('battleGroup').value,
-      :last_modified => Date.parse(char_info.attr('lastModified').value),
-
-      :class      => char_info.attr('class').value,
-      :class_id   => char_info.attr('classId').value.to_i,
-
-      :faction    => char_info.attr('faction').value,
-      :faction_id => char_info.attr('factionId').value.to_i,
-
-      :race       => char_info.attr('race').value,
-      :race_id    => char_info.attr('raceId').value.to_i,
-
-      :gender     => char_info.attr('gender').value,
-      :gender_id  => char_info.attr('genderId').value.to_i
-    }
+    CharacterFactory.build(doc.css("characterInfo character").first)
   end
 
   def guild_info(region, realm, guild_name)
@@ -68,7 +47,7 @@ module Armory
 
     case response.code
     when 404
-      raise CharacterNotFound, "Could not find #{character} on #{region}:#{realm}"
+      raise GuildNotFound, "Could not find #{guild_name} on #{region}:#{realm}"
     end
 
     doc = Nokogiri::XML(response.body)
