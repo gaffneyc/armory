@@ -1,9 +1,7 @@
 module Armory
   class Character
 
-    attr_accessor :name, :level, :rank, :guild, :realm, :battle_group,
-      :last_modified
-
+    attr_accessor :name, :level, :guild, :realm, :battle_group, :last_modified
     attr_accessor :class_id, :gender_id, :race_id, :faction_id
     attr_reader :items
 
