@@ -6,8 +6,8 @@ Gem::Specification.new do |s|
   s.homepage           = 'http://github.com/gaffneyc/armory'
   s.summary            = 'Library for downloading and parsing the wow armory'
   s.require_path       = 'lib'
-  s.authors            = ['Chris Gaffney']
-  s.email              = ['gaffneyc@gmail.com']
+  s.authors            = ['Chris Gaffney', 'Jason Roelofs']
+  s.email              = ['gaffneyc@gmail.com', 'jameskilton@gmail.com']
   s.version            = Armory::VERSION
   s.platform           = Gem::Platform::RUBY
   s.files              = Dir.glob("{lib,spec}/**/*") + %w[LICENSE README.rdoc]
